@@ -21,14 +21,24 @@ class AdapterUsers(
         var email: TextView? = null
         var phone: TextView? = null
         var website: TextView? = null
+        var address: TextView? = null
+        var street: TextView? = null
+        var suite: TextView? = null
+        var city: TextView? = null
+        var zipcode: TextView? = null
 
 
         init {
             name = view.findViewById(R.id.txtVw_name_listItem_id)
-            userName = view.findViewById(R.id.txtVw_userName_listItem_id)
+          //  userName = view.findViewById(R.id.txtVw_userName_listItem_id)
             email = view.findViewById(R.id.txtVw_email_listItem_id)
             phone = view.findViewById(R.id.txtVw_phone_listItem_id)
             website = view.findViewById(R.id.txtVw_websSite_listItem_id)
+            address = view.findViewById(R.id.txtVw_address_listItem_id)
+            street = view.findViewById(R.id.txtVw_street_listItem_id)
+            suite = view.findViewById(R.id.txtVw_suite_listItem_id)
+            city = view.findViewById(R.id.txtVw_city_listItem_id)
+            zipcode = view.findViewById(R.id.txtVw_zipcode_listItem_id)
         }
     }
 
@@ -41,10 +51,14 @@ class AdapterUsers(
     override fun onBindViewHolder(holder: ViewHolderPokemon, position: Int) {
         var pokemon = listPokemon.get(position)
         holder.name?.text = "Nome = " + pokemon.name
-        holder.userName?.text = "• UserName = " + pokemon.userName
+       // holder.userName?.text = "• UserName = " + pokemon.userName
         holder.email?.text = "• E - Mail = " + pokemon.eMail
         holder.phone?.text = "• Telefone = " + pokemon.phone
         holder.website?.text = "• WebSite = " + pokemon.website
+        holder.city?.text = "• City = " + pokemon.address?.city
+        holder.street?.text = "• Street = " + pokemon.address?.street
+        holder.suite?.text = "• Suite = " + pokemon.address?.suite
+        holder.zipcode?.text = "• ZipCode = " + pokemon.address?.zipcode
     }
 
     override fun getItemCount(): Int {
