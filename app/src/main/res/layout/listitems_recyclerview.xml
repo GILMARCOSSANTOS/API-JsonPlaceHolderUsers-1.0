@@ -34,15 +34,6 @@
             android:text="▬▬ Contato Pessoal:"
             android:textSize="20sp" />
 
-<!--        <com.google.android.material.textview.MaterialTextView-->
-<!--            android:id="@+id/txtVw_userName_listItem_id"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginStart="7dp"-->
-<!--            android:layout_marginTop="25dp"-->
-<!--            android:text="User Name = GilmarcosSantos"-->
-<!--            android:textSize="20sp" />-->
-
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/txtVw_email_listItem_id"
             android:layout_width="match_parent"

@@ -15,8 +15,7 @@ class AdapterUsers(
 ) : RecyclerView.Adapter<AdapterUsers.ViewHolderPokemon>() {
 
     class ViewHolderPokemon(var view: View) : RecyclerView.ViewHolder(view) {
-
-        var name: TextView? = null
+        var nameTxtVw: TextView? = null
         var userName: TextView? = null
         var email: TextView? = null
         var phone: TextView? = null
@@ -27,10 +26,8 @@ class AdapterUsers(
         var city: TextView? = null
         var zipcode: TextView? = null
 
-
         init {
-            name = view.findViewById(R.id.txtVw_name_listItem_id)
-          //  userName = view.findViewById(R.id.txtVw_userName_listItem_id)
+            nameTxtVw = view.findViewById(R.id.txtVw_name_listItem_id)
             email = view.findViewById(R.id.txtVw_email_listItem_id)
             phone = view.findViewById(R.id.txtVw_phone_listItem_id)
             website = view.findViewById(R.id.txtVw_websSite_listItem_id)
@@ -50,8 +47,7 @@ class AdapterUsers(
 
     override fun onBindViewHolder(holder: ViewHolderPokemon, position: Int) {
         var pokemon = listPokemon.get(position)
-        holder.name?.text = "Nome = " + pokemon.name
-       // holder.userName?.text = "• UserName = " + pokemon.userName
+        holder.nameTxtVw?.text = "Nome = " + pokemon.name
         holder.email?.text = "• E - Mail = " + pokemon.eMail
         holder.phone?.text = "• Telefone = " + pokemon.phone
         holder.website?.text = "• WebSite = " + pokemon.website
