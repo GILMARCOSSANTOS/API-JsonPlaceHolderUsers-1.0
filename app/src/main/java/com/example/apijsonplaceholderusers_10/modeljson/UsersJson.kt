@@ -24,18 +24,3 @@ class UsersJson(
 
 ) : Serializable
 
-class Address(
-
-    @SerializedName("street")
-    var street: String? = null,
-
-    @SerializedName("suite")
-    var suite: String? = null,
-
-    @SerializedName("city")
-    var city: String? = null,
-
-    @SerializedName("zipcode")
-    var zipcode: String? = null
-
-) : Serializable

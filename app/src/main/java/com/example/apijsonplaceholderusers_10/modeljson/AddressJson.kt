@@ -4,18 +4,18 @@ import android.widget.TextView
 import com.google.gson.annotations.SerializedName
 import java.io.Serializable
 
-//data class AddressJson(
-//
-//    @SerializedName("street")
-//    val street: TextView? = null,
-//
-//    @SerializedName("suite")
-//    val suite: String? = null,
-//
-//    @SerializedName("city")
-//    val city: String? = null,
-//
-//    @SerializedName("zipcode")
-//    val zipcode: String? = null
-//
-//) : Serializable
+class Address (
+
+    @SerializedName("street")
+    var street: String? = null,
+
+    @SerializedName("suite")
+    var suite: String? = null,
+
+    @SerializedName("city")
+    var city: String? = null,
+
+    @SerializedName("zipcode")
+    var zipcode: String? = null
+
+) : Serializable

@@ -11,6 +11,7 @@ import com.example.apijsonplaceholderusers_10.R
 import com.example.apijsonplaceholderusers_10.adapter.AdapterUsers
 import com.example.apijsonplaceholderusers_10.api.ApiUrlBase
 import com.example.apijsonplaceholderusers_10.modeljson.UsersJson
+import com.google.android.material.textview.MaterialTextView
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -19,7 +20,7 @@ class MainActivity : AppCompatActivity() {
 
     private var listUsersJson: MutableList<UsersJson> = mutableListOf<UsersJson>()
     private var adapterUsers: AdapterUsers? = null
-    private lateinit var recyclerViewUsers : RecyclerView
+    private lateinit var recyclerViewUsers: RecyclerView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,9 +30,9 @@ class MainActivity : AppCompatActivity() {
         centerTitleActionBar()
         settingsRecyclerViewUsers()
         getUsersApi()
-
     }
-    private fun settingsRecyclerViewUsers(){
+
+    private fun settingsRecyclerViewUsers() {
         listUsersJson = mutableListOf()
         recyclerViewUsers = findViewById(R.id.rcclrVw_actvtMain_id)
 
@@ -43,7 +44,7 @@ class MainActivity : AppCompatActivity() {
         recyclerViewUsers.adapter = adapterUsers
     }
 
-    private fun getUsersApi(){
+    private fun getUsersApi() {
         ApiUrlBase.apiServiceUsers.getUsersEndUrl().enqueue(object :
             Callback<MutableList<UsersJson>> {
             override fun onResponse(
