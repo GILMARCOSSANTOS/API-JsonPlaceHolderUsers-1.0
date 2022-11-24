@@ -10,11 +10,14 @@ import com.example.apijsonplaceholderusers_10.R
 import com.example.apijsonplaceholderusers_10.modeljson.UsersJson
 
 class AdapterUsers(
-    private val context: Context, private var listPokemon:
-    MutableList<UsersJson>
-) : RecyclerView.Adapter<AdapterUsers.ViewHolderPokemon>() {
 
-    class ViewHolderPokemon(var view: View) : RecyclerView.ViewHolder(view) {
+    /* Variáveis de Escopo Global: */
+    private val context: Context,
+    private var listUser: MutableList<UsersJson>
+
+) : RecyclerView.Adapter<AdapterUsers.ViewHolderUser>() {
+
+    class ViewHolderUser(var view: View) : RecyclerView.ViewHolder(view) {
         var nameTxtVw: TextView? = null
         var userName: TextView? = null
         var email: TextView? = null
@@ -39,25 +42,25 @@ class AdapterUsers(
         }
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolderPokemon {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolderUser {
         val inflater = LayoutInflater.from(context)
         val view: View = inflater.inflate(R.layout.listitems_recyclerview, parent, false)
-        return ViewHolderPokemon(view)
+        return ViewHolderUser(view)
     }
 
-    override fun onBindViewHolder(holder: ViewHolderPokemon, position: Int) {
-        var pokemon = listPokemon.get(position)
-        holder.nameTxtVw?.text = "Nome = " + pokemon.name
-        holder.email?.text = "• E - Mail = " + pokemon.eMail
-        holder.phone?.text = "• Telefone = " + pokemon.phone
-        holder.website?.text = "• WebSite = " + pokemon.website
-        holder.city?.text = "• City = " + pokemon.address?.city
-        holder.street?.text = "• Street = " + pokemon.address?.street
-        holder.suite?.text = "• Suite = " + pokemon.address?.suite
-        holder.zipcode?.text = "• ZipCode = " + pokemon.address?.zipcode
+    override fun onBindViewHolder(holder: ViewHolderUser, position: Int) {
+        var userData = listUser.get(position)
+        holder.nameTxtVw?.text = "Nome = " + userData.name
+//        holder.email?.text = "• E - Mail = " + user.e
+//        holder.phone?.text = "• Telefone = " + pokemon.phone
+//        holder.website?.text = "• WebSite = " + pokemon.website
+//        holder.city?.text = "• City = " + pokemon.address?.city
+//        holder.street?.text = "• Street = " + pokemon.address?.street
+//        holder.suite?.text = "• Suite = " + pokemon.address?.suite
+//        holder.zipcode?.text = "• ZipCode = " + pokemon.address?.zipcode
     }
 
     override fun getItemCount(): Int {
-        return listPokemon.size
+        return listUser.size
     }
 }

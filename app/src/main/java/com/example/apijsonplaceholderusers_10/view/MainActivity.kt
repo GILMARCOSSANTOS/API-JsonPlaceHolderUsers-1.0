@@ -45,7 +45,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun getUsersApi() {
-        ApiUrlBase.apiServiceUsers.getUsersEndUrl().enqueue(object :
+        ApiUrlBase.apiServiceUsers.getUsersEndUrl()
+            .enqueue(object :
             Callback<MutableList<UsersJson>> {
             override fun onResponse(
                 call: Call<MutableList<UsersJson>>,
@@ -59,7 +60,6 @@ class MainActivity : AppCompatActivity() {
                     println("Resposta da API = " + responseUseres)
                 }
             }
-
             override fun onFailure(call: Call<MutableList<UsersJson>>, t: Throwable) {
                 Log.e("Error", t.localizedMessage)
             }
