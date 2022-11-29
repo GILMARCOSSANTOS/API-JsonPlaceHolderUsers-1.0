@@ -51,13 +51,13 @@ class AdapterUsers(
     override fun onBindViewHolder(holder: ViewHolderUser, position: Int) {
         var userData = listUser.get(position)
         holder.nameTxtVw?.text = "Nome = " + userData.name
-//        holder.email?.text = "• E - Mail = " + user.e
-//        holder.phone?.text = "• Telefone = " + pokemon.phone
-//        holder.website?.text = "• WebSite = " + pokemon.website
-//        holder.city?.text = "• City = " + pokemon.address?.city
-//        holder.street?.text = "• Street = " + pokemon.address?.street
-//        holder.suite?.text = "• Suite = " + pokemon.address?.suite
-//        holder.zipcode?.text = "• ZipCode = " + pokemon.address?.zipcode
+        holder.email?.text = "• E - Mail = " + userData.eMail
+        holder.phone?.text = "• Telefone = " + userData.phone
+        holder.website?.text = "• WebSite = " + userData.website
+        holder.city?.text = "• City = " + userData.address?.city
+        holder.street?.text = "• Street = " + userData.address?.street
+        holder.suite?.text = "• Suite = " + userData.address?.suite
+        holder.zipcode?.text = "• ZipCode = " + userData.address?.zipcode
     }
 
     override fun getItemCount(): Int {
