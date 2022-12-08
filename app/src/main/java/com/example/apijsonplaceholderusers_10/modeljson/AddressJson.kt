@@ -1,10 +1,9 @@
 package com.example.apijsonplaceholderusers_10.modeljson
 
-import android.widget.TextView
 import com.google.gson.annotations.SerializedName
 import java.io.Serializable
 
-class Address (
+class AddressJson (
 
     @SerializedName("street")
     var street: String? = null,

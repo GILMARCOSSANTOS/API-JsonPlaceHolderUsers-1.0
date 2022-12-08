@@ -14,7 +14,7 @@ class AdapterUsers(
     MutableList<UsersJson>
 ) : RecyclerView.Adapter<AdapterUsers.ViewHolderPokemon>() {
 
-    class ViewHolderPokemon(var view: View) : RecyclerView.ViewHolder(view) {
+    class ViewHolderPokemon(view: View) : RecyclerView.ViewHolder(view) {
         var nameTxtVw: TextView? = null
         var userName: TextView? = null
         var email: TextView? = null
@@ -36,6 +36,7 @@ class AdapterUsers(
             suite = view.findViewById(R.id.txtVw_suite_listItem_id)
             city = view.findViewById(R.id.txtVw_city_listItem_id)
             zipcode = view.findViewById(R.id.txtVw_zipcode_listItem_id)
+            userName = view.findViewById(R.id.txtVw_userName_listItem_id)
         }
     }
 
@@ -51,9 +52,10 @@ class AdapterUsers(
         holder.email?.text = "• E - Mail = " + pokemon.eMail
         holder.phone?.text = "• Telefone = " + pokemon.phone
         holder.website?.text = "• WebSite = " + pokemon.website
-        holder.city?.text = "• City = " + pokemon.address?.city
+        holder.userName?.text = "• UserName = " + pokemon.userName
         holder.street?.text = "• Street = " + pokemon.address?.street
         holder.suite?.text = "• Suite = " + pokemon.address?.suite
+        holder.city?.text = "• City = " + pokemon.address?.city
         holder.zipcode?.text = "• ZipCode = " + pokemon.address?.zipcode
     }
 

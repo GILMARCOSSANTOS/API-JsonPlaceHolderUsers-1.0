@@ -51,11 +51,19 @@
             android:textSize="20sp" />
 
         <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtVw_userName_listItem_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:text="• User Namme = GS"
+            android:textSize="20sp" />
+
+        <com.google.android.material.textview.MaterialTextView
             android:id="@+id/txtVw_websSite_listItem_id"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="7dp"
-            android:text="WebSite = Gilmarcosxsantos@gmail.com"
+            android:text="• WebSite = Gilmarcosxsantos@gmail.com"
             android:textSize="20sp" />
 
         <com.google.android.material.textview.MaterialTextView
@@ -96,6 +104,13 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="7dp"
             android:text="• ZipCode"
+            android:textSize="20sp" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtVw_zipcode_listItem_id01"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
             android:textSize="20sp" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
