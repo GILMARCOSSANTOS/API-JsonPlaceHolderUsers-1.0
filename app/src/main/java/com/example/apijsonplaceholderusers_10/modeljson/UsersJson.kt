@@ -20,7 +20,7 @@ class UsersJson(
     @SerializedName("website")
     val website: String? = null,
 
-    var address: Address? = null
+    var address: AddressJson? = null
 
 ) : Serializable
 

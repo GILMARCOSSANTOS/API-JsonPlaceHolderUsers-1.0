@@ -10,14 +10,11 @@ import com.example.apijsonplaceholderusers_10.R
 import com.example.apijsonplaceholderusers_10.modeljson.UsersJson
 
 class AdapterUsers(
+    private val context: Context, private var listPokemon:
+    MutableList<UsersJson>
+) : RecyclerView.Adapter<AdapterUsers.ViewHolderPokemon>() {
 
-    /* Variáveis de Escopo Global: */
-    private val context: Context,
-    private var listUser: MutableList<UsersJson>
-
-) : RecyclerView.Adapter<AdapterUsers.ViewHolderUser>() {
-
-    class ViewHolderUser(var view: View) : RecyclerView.ViewHolder(view) {
+    class ViewHolderPokemon(view: View) : RecyclerView.ViewHolder(view) {
         var nameTxtVw: TextView? = null
         var userName: TextView? = null
         var email: TextView? = null
@@ -40,18 +37,19 @@ class AdapterUsers(
             suite = view.findViewById(R.id.txtVw_suite_listItem_id)
             city = view.findViewById(R.id.txtVw_city_listItem_id)
             zipcode = view.findViewById(R.id.txtVw_zipcode_listItem_id)
+            userName = view.findViewById(R.id.txtVw_userName_listItem_id)
         }
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolderUser {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolderPokemon {
         val inflater = LayoutInflater.from(context)
         val view: View = inflater.inflate(R.layout.listitems_recyclerview, parent, false)
-        return ViewHolderUser(view)
+        return ViewHolderPokemon(view)
     }
 
-    override fun onBindViewHolder(holder: ViewHolderUser, position: Int) {
-        var userData = listUser.get(position)
-        holder.nameTxtVw?.text = "Nome = " + userData.name
+    override fun onBindViewHolder(holder: ViewHolderPokemon, position: Int) {
+        var userData = listPokemon.get(position)
+        holder.nameTxtVw?.text = "• Nome = " + userData.name
         holder.email?.text = "• E - Mail = " + userData.eMail
         holder.phone?.text = "• Telefone = " + userData.phone
         holder.website?.text = "• WebSite = " + userData.website
@@ -63,6 +61,6 @@ class AdapterUsers(
     }
 
     override fun getItemCount(): Int {
-        return listUser.size
+        return listPokemon.size
     }
 }
