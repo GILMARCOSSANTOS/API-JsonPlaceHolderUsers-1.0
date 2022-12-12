@@ -59,6 +59,14 @@
             android:textSize="20sp" />
 
         <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtVw_userName_listItem_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:text="WebSite = GS"
+            android:textSize="20sp" />
+
+        <com.google.android.material.textview.MaterialTextView
             android:id="@+id/txtVw_address_listItem_id"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

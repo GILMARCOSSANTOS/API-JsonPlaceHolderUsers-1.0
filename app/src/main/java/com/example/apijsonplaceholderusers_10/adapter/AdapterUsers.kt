@@ -33,6 +33,7 @@ class AdapterUsers(
             nameTxtVw = view.findViewById(R.id.txtVw_name_listItem_id)
             email = view.findViewById(R.id.txtVw_email_listItem_id)
             phone = view.findViewById(R.id.txtVw_phone_listItem_id)
+            userName = view.findViewById(R.id.txtVw_userName_listItem_id)
             website = view.findViewById(R.id.txtVw_websSite_listItem_id)
             address = view.findViewById(R.id.txtVw_address_listItem_id)
             street = view.findViewById(R.id.txtVw_street_listItem_id)
@@ -54,6 +55,7 @@ class AdapterUsers(
         holder.email?.text = "• E - Mail = " + userData.eMail
         holder.phone?.text = "• Telefone = " + userData.phone
         holder.website?.text = "• WebSite = " + userData.website
+        holder.userName?.text = "• UserName = " + userData.userName
         holder.city?.text = "• City = " + userData.address?.city
         holder.street?.text = "• Street = " + userData.address?.street
         holder.suite?.text = "• Suite = " + userData.address?.suite
