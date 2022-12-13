@@ -8,5 +8,4 @@ interface ApiUrlRelative {
 
     @GET("users")
     fun getUsersEndUrl(): Call<MutableList<UsersJson>>
-
 }
